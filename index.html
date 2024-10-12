@@ -19,7 +19,7 @@
         .row {
             display: flex;
             justify-content: space-between; /* Ensure columns are evenly spaced */
-            align-items: flex-start; /* Aligns columns to the top */
+            position: relative; /* Add relative positioning for better control */
         }
         .col {
             padding: 15px;
@@ -28,8 +28,10 @@
         .col-half {
             flex-basis: 45%; /* Adjusted width to ensure columns have similar size */
         }
-        .col-third {
-            flex: 0 0 33.33%;
+        .related-resources {
+            position: absolute; /* Set absolute positioning */
+            right: 0; /* Align to the right */
+            bottom: 0; /* Align the bottom of the section to the bottom of the row */
         }
         table {
             width: 100%;
@@ -73,15 +75,12 @@
             border-radius: 5px;
             display: inline-block;
         }
-        .related-resources {
-            margin-top: 0; /* Ensure proper alignment with the table */
-        }
         .related-resources ul {
             list-style: none;
             padding: 0;
         }
         .related-resources ul li {
-            margin-bottom: 15px; /* Increased space between list items */
+            margin-bottom: 15px;
         }
         .related-resources ul li a {
             color: #007bff;
@@ -89,18 +88,6 @@
         }
         .related-resources ul li a:hover {
             text-decoration: underline;
-        }
-        .resource-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        .resource-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
         }
     </style>
 </head>
